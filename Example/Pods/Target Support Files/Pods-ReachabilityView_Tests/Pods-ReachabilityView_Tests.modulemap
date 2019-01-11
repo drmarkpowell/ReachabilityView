@@ -1,4 +1,4 @@
-module Pods_ReachabilityView_Tests {
+framework module Pods_ReachabilityView_Tests {
   umbrella header "Pods-ReachabilityView_Tests-umbrella.h"
 
   export *

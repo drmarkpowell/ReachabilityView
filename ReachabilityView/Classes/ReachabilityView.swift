@@ -12,8 +12,8 @@ import Reachability
 @IBDesignable open class ReachabilityView: UIView {
     
     var reachability: Reachability?
-    var imageView = UIImageView(frame: .zero)
-    private var didSetupConstraints = false
+    @IBOutlet var containerView: UIView!
+    @IBOutlet var imageView: UIImageView!
     
     @IBInspectable var size:CGFloat = 48 {
         didSet {
@@ -40,33 +40,18 @@ import Reachability
     }
    
     fileprivate func setup() {
-        translatesAutoresizingMaskIntoConstraints = false
-        clipsToBounds = true
-        setupImageView()
-        setNeedsUpdateConstraints()
+        loadViewFromNib()
         initReachability()
     }
     
-    fileprivate func setupImageView() {
-        addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        addConstraintsForImageView()
-    }
-    
-    fileprivate func addConstraintsForImageView() {
-        NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 48),
-            imageView.heightAnchor.constraint(equalToConstant: 48),
-            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
-            ])
-    }
-    
-    open override func updateConstraints() {
-        if !didSetupConstraints {
-            addConstraintsForImageView()
+    func loadViewFromNib() {
+        if containerView == nil {
+            let bundle = Bundle(for: ReachabilityView.self)
+            bundle.loadNibNamed("ReachabilityView", owner: self, options: nil)
+            addSubview(containerView)
+            containerView.frame = bounds
+            containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         }
-        super.updateConstraints()
     }
     
     open override func layoutIfNeeded() {
@@ -112,10 +97,11 @@ import Reachability
     
     func updateAppearance() {
         backgroundColor = UIColor.clear
-        let imageName = statusOn ? "connectedIcon48" : "disconnectedIcon48"
+        let imageName = statusOn ? "connected" : "disconnected"
         let bundle = Bundle(for: ReachabilityView.self)
-        let image = UIImage(named: imageName, in: bundle, compatibleWith: traitCollection)
-        imageView.image = image
+        let newImage = UIImage(named: imageName, in: bundle, compatibleWith: traitCollection)
+        imageView.image = newImage
     }
 
 }
+

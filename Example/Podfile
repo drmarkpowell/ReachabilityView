@@ -1,5 +1,5 @@
 platform :ios, '10.0'
-#use_frameworks!
+use_frameworks! #required for IBDesignables, static libraries/frameworks are not supported
 
 target 'ReachabilityView_Example' do
   pod 'ReachabilityView', :path => '../'
@@ -15,10 +15,9 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 8.0
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.0'
-        #       config.build_settings.delete('CODE_SIGNING_ALLOWED')
-        #        config.build_settings.delete('CODE_SIGNING_REQUIRED')
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 10.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+        config.build_settings['LD_RUNPATH_SEARCH_PATHS'] += ' $(FRAMEWORK_SEARCH_PATHS)'
       end
     end
   end

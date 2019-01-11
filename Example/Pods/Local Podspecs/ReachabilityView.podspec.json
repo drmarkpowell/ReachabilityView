@@ -19,7 +19,7 @@
     "ios": "10.0"
   },
   "source_files": "ReachabilityView/Classes/**/*",
-  "resources": "ReachabilityView/Assets/**/*.{xcassets,png}",
+  "resources": "ReachabilityView/Assets/**/*.{xcassets,png,xib}",
   "dependencies": {
     "ReachabilitySwift": [
       "~> 4"
