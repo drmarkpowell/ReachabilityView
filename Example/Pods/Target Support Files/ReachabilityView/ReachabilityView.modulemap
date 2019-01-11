@@ -1,4 +1,4 @@
-module ReachabilityView {
+framework module ReachabilityView {
   umbrella header "ReachabilityView-umbrella.h"
 
   export *

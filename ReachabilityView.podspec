@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'ReachabilityView/Classes/**/*'
-  s.resources = 'ReachabilityView/Assets/**/*.{xcassets,png}'
+  s.resources = 'ReachabilityView/Assets/**/*.{xcassets,png,xib}'
   
   # s.resource_bundles = {
   #   'ReachabilityView' => ['ReachabilityView/Assets/*.png']
