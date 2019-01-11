@@ -1263,7 +1263,7 @@
 				INFOPLIST_FILE = "Target Support Files/ReachabilityView/ReachabilityView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				MODULEMAP_FILE = "Target Support Files/ReachabilityView/ReachabilityView.modulemap";
 				PRODUCT_MODULE_NAME = ReachabilityView;
 				PRODUCT_NAME = ReachabilityView;
@@ -1362,7 +1362,7 @@
 				INFOPLIST_FILE = "Target Support Files/ReachabilityView/ReachabilityView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				MODULEMAP_FILE = "Target Support Files/ReachabilityView/ReachabilityView.modulemap";
 				PRODUCT_MODULE_NAME = ReachabilityView;
 				PRODUCT_NAME = ReachabilityView;
