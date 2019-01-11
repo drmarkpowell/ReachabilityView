@@ -1,0 +1,6 @@
+module ReachabilityView {
+  umbrella header "ReachabilityView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,31 @@
+PODS:
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - ReachabilitySwift (4.3.0)
+  - ReachabilityView (0.1.0):
+    - ReachabilitySwift (~> 4)
+
+DEPENDENCIES:
+  - Nimble (~> 7.3.1)
+  - Quick (~> 1.3.2)
+  - ReachabilityView (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+    - ReachabilitySwift
+
+EXTERNAL SOURCES:
+  ReachabilityView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  ReachabilityView: 9b28a859bda66edcb02a5b2af191a85701e3e36d
+
+PODFILE CHECKSUM: dd6eb98fa9b640eb0f0838e1c3f2f01360c18483
+
+COCOAPODS: 1.6.0.beta.2
