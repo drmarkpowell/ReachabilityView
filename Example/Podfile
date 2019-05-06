@@ -3,6 +3,7 @@ use_frameworks! #required for IBDesignables, static libraries/frameworks are not
 
 target 'ReachabilityView_Example' do
   pod 'ReachabilityView', :path => '../'
+  pod 'ReachabilitySwift', '~> 4'
 
   target 'ReachabilityView_Tests' do
     inherit! :search_paths
@@ -18,7 +19,9 @@ post_install do |installer|
       if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 10.0
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
       end
-      config.build_settings['LD_RUNPATH_SEARCH_PATHS'] += ' $(FRAMEWORK_SEARCH_PATHS)'
+      unless config.build_settings['LD_RUNPATH_SEARCH_PATHS'].nil?
+        config.build_settings['LD_RUNPATH_SEARCH_PATHS'] << ' $(FRAMEWORK_SEARCH_PATHS)'
+      end
     end
   end
 end

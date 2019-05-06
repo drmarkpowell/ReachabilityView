@@ -2,12 +2,12 @@ PODS:
   - Nimble (8.0.1)
   - Quick (2.1.0)
   - ReachabilitySwift (4.3.1)
-  - ReachabilityView (0.1.0):
-    - ReachabilitySwift (~> 4)
+  - ReachabilityView (0.1.0)
 
 DEPENDENCIES:
   - Nimble (~> 8)
   - Quick (~> 2)
+  - ReachabilitySwift (~> 4)
   - ReachabilityView (from `../`)
 
 SPEC REPOS:
@@ -24,8 +24,8 @@ SPEC CHECKSUMS:
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  ReachabilityView: 80d57bf12e3fb230b605db17cc5f6eb35b2e68dc
+  ReachabilityView: dc72bb0be79a9cfe87bcc3bcd79eea47d8329403
 
-PODFILE CHECKSUM: e9ca1bd65f4abdc765adb3d21b25ddf709135b4e
+PODFILE CHECKSUM: 4308fe06c8b7878fc2d31449791a4ac656919e36
 
 COCOAPODS: 1.6.0.beta.2
