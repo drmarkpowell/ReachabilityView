@@ -17,8 +17,8 @@ post_install do |installer|
     target.build_configurations.each do |config|
       if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 10.0
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
-        config.build_settings['LD_RUNPATH_SEARCH_PATHS'] += ' $(FRAMEWORK_SEARCH_PATHS)'
       end
+      config.build_settings['LD_RUNPATH_SEARCH_PATHS'] += ' $(FRAMEWORK_SEARCH_PATHS)'
     end
   end
 end
