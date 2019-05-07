@@ -13,7 +13,7 @@ import UIKit
     @IBOutlet var containerView: UIView!
     @IBOutlet var imageView: UIImageView!
     
-    @IBInspectable public var size:CGFloat = 48 {
+    @IBInspectable public var size:CGFloat = 44 {
         didSet {
             updateAppearance()
         }

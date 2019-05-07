@@ -20,20 +20,21 @@
             <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-ao-H2y">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disconnected" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-ao-H2y">
                     <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="pi7-ao-H2y" secondAttribute="trailing" id="1HR-Nl-THU"/>
-                <constraint firstItem="pi7-ao-H2y" firstAttribute="leading" secondItem="UBX-hi-2vt" secondAttribute="leading" id="5eE-Sb-PjF"/>
-                <constraint firstItem="pi7-ao-H2y" firstAttribute="top" secondItem="UBX-hi-2vt" secondAttribute="top" id="YjI-O2-CKs"/>
-                <constraint firstAttribute="bottom" secondItem="pi7-ao-H2y" secondAttribute="bottom" id="wL8-Bq-0q5"/>
+                <constraint firstItem="pi7-ao-H2y" firstAttribute="centerX" secondItem="UBX-hi-2vt" secondAttribute="centerX" id="HRb-6k-DQV"/>
+                <constraint firstItem="pi7-ao-H2y" firstAttribute="centerY" secondItem="UBX-hi-2vt" secondAttribute="centerY" id="tK1-9w-XGU"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="disconnected" width="48" height="48"/>
+    </resources>
 </document>
