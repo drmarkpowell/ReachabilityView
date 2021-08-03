@@ -1,27 +1,27 @@
-platform :ios, '10.0'
+platform :ios, '14.0'
 use_frameworks! #required for IBDesignables, static libraries/frameworks are not supported
 
 target 'ReachabilityView_Example' do
   pod 'ReachabilityView', :path => '../'
-  pod 'ReachabilitySwift', '~> 4'
+  pod 'ReachabilitySwift', '~> 5'
 
   target 'ReachabilityView_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 2' #1.3.2 rather than 1.2.0
-    pod 'Nimble', '~> 8' #7.3.1 rather than 7.0.2
+    pod 'Quick', '~> 4' #1.3.2 rather than 1.2.0
+    pod 'Nimble', '~> 9' #7.3.1 rather than 7.0.2
   end
 end
 
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 10.0
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
-      end
-      unless config.build_settings['LD_RUNPATH_SEARCH_PATHS'].nil?
-        config.build_settings['LD_RUNPATH_SEARCH_PATHS'] << ' $(FRAMEWORK_SEARCH_PATHS)'
-      end
-    end
-  end
-end
+#post_install do |installer|
+#  installer.pods_project.targets.each do |target|
+#    target.build_configurations.each do |config|
+#      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 10.0
+#        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+#      end
+#      unless config.build_settings['LD_RUNPATH_SEARCH_PATHS'].nil?
+#        config.build_settings['LD_RUNPATH_SEARCH_PATHS'] << ' $(FRAMEWORK_SEARCH_PATHS)'
+#      end
+#    end
+#  end
+#end
